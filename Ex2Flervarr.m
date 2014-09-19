@@ -52,9 +52,11 @@ axis equal, axis vis3d, rotate3d on
 %% Uppg3
 clear
 
+%Li=@(a,b,x,y)
 L=@(x,y)[8;exp(2)+1] + [12, 2;exp(2)+1, 2*exp(2)+1] * [x-2;y-1]
 
-L(2,1)
+
+L(1.5,1.8)
 
 %% Example
 clear
