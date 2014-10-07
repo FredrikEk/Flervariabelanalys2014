@@ -98,6 +98,9 @@ q=integral2(@(x,y)x.*exp(x.*y),0,1,0,2)
 clear
 
 a=2;
-x=1;
 
-q = integral2(@(x,y)(a-x+y),0,sqrt(a),0,a-((x.^2)/a))
+f=@(x,y)(a-x+y);
+rho=@(x,y) y <=a - ((x.^2)/a);
+
+corr = a^3*28/15
+q = integral2(@(x,y)f(x,y).*rho(x,y) ,-a,a,0,a)
